@@ -33,16 +33,7 @@ function LoginUser() {
     };
 
 
-    const handleSubmit = async () => {
-        const response = await axios.post('http://localhost:8080/api/v1/auth/register', {
-            email: email,
-            password: password
-        });
-        console.log(response.data);
 
-        saveJwtToken(response.data.token);
-
-    };
 
 
     const handleLogin = async () => {
@@ -54,6 +45,7 @@ function LoginUser() {
                 password: password
             });
             console.log(response.data);
+
 
 
 
